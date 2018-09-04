@@ -11,7 +11,7 @@ class RunnerRunnable implements Runnable {
         for (int i = 0; i < 500000; i++) {
             System.out.println("Hello: " + i + " Thread: " + Thread.currentThread().getName());
             try {
-                Thread.sleep(100);
+                Thread.sleep(1);
             } catch (InterruptedException ex) {}
         }
     }
@@ -19,9 +19,10 @@ class RunnerRunnable implements Runnable {
 
 public class ApplicationRunnable {
     public static void main(String[] args) {
-        Thread thread1 = new Thread(new RunnerRunnable());
-        Thread thread2 = new Thread(new RunnerRunnable());
-        thread1.start();
-        thread2.start();
+        Thread thread = new Thread(new RunnerRunnable());
+        thread.setPriority(Thread.MIN_PRIORITY);
+        thread.start();
+        
+        new Thread(new RunnerRunnable()).start();
     }
 }

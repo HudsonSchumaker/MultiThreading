@@ -11,7 +11,7 @@ class Runner extends Thread {
         for (int i = 0; i < 5; i++) {
             System.out.println("Hello: " + i + " Thread: " + Thread.currentThread().getName());
             try {
-                Thread.sleep(100);
+                Thread.sleep(1);
             } catch (InterruptedException e) {}
         }
     }
