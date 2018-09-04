@@ -7,6 +7,10 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+/**
+ *
+ * @author hudson.schumaker
+ */
 class CallableImpl implements Callable<Integer> {
     private int myName;
     CallableImpl(int i) {
