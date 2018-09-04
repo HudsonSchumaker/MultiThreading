@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import static java.util.Comparator.comparing;
+import static java.util.Comparator.comparingInt;
+
 
 /**
  *
@@ -37,9 +39,9 @@ public class WorkerMethodsSynchronized {
     }
     
     public synchronized void stageThree() {
-        //list1.sort((l1,l2) -> l1.compareTo(l2)); // Versão longa
-        list1.sort(comparing(l1 -> l1)); 
-        list2.sort(comparing(l2 -> l2)); 
+       //list1.sort((l1,l2) -> l1.compareTo(l2)); // Versão longa
+       list1.sort(comparing(l1 -> l1));
+       list2.sort(comparingInt(l2 -> l2));// use assim para evitar autoboxing (long, doudle e int)
     }
 
     public void process() {
