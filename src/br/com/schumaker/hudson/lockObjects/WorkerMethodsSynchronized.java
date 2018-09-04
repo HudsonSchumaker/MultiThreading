@@ -43,7 +43,7 @@ public class WorkerMethodsSynchronized {
     }
 
     public void process() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             stageOne();
             stageTwo();
             stageThree();
@@ -74,7 +74,6 @@ public class WorkerMethodsSynchronized {
             t2.join();
             t3.join();
         } catch (InterruptedException ex) {}
-
         long end = System.currentTimeMillis();
         
         list1.forEach(l -> System.out.println(l));
