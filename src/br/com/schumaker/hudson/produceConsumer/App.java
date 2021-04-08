@@ -2,7 +2,7 @@ package br.com.schumaker.hudson.produceConsumer;
 
 /**
  *
- * @author hudson.schumaker
+ * @author Hudson Schumaker
  */
 public class App {
     public static void main(String[] args) throws InterruptedException {
